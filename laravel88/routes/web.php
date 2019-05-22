@@ -11,6 +11,11 @@
 |
 */
 
+Route::prefix('index')->group(function(){
+ Route::any('/add','index\\IndexController@index');
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
